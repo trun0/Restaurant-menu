@@ -26,7 +26,7 @@ function Cart(props) {
 
     function handlePay(e) {
         e.preventDefault();
-        axios.post('http://localhost:8000/invoices', {
+        axios.post('https://thumbstack-backend.herokuapp.com/invoices', {
             name: userName,
             list: boughtItemArray,
             count: props.totalCount,

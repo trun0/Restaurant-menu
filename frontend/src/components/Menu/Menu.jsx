@@ -9,7 +9,7 @@ function Menu(props) {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/items')
+        axios.get('https://thumbstack-backend.herokuapp.com/items')
             .then(function (response) {
                 //console.log(response);
                 setItems(response.data);
