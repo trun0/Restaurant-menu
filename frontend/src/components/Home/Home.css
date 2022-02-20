@@ -1,0 +1,39 @@
+.home {
+    color: white;
+}
+
+.home-content {
+    background-image: url(https://png.pngtree.com/back_origin_pic/03/91/31/216a8c258305188af56217c3b58b99c5.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 56px);
+    padding-left: 23%;
+}
+
+.home-heading {
+    padding-top: 100px;
+font-size: 50px;
+font-family:cursive;
+font-style: italic;
+text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+}
+
+.home-welcome {
+font-size: 30px;
+}
+
+.home-message {
+font-size: large;
+font-family:cursive;
+margin-bottom: 40px;
+}
+
+@media screen and (max-width: 500px) {
+    .home-heading {
+        font-size: 25px;
+    }
+    .home-content {
+        padding-left: 0;
+        text-align: center;
+    }
+}

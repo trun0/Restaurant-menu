@@ -1,0 +1,70 @@
+@keyframes slide {
+  0% {
+    position: absolute;
+    top: 100%;
+  }
+  100% {
+    position: fixed;
+    bottom: 0;
+  }
+}
+
+.menu-status {
+  margin-left: 10%;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  /* background-color: red; */
+  color: white;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.proceed-btn {
+  float: right;
+  margin-right: 10px;
+}
+
+.items-dropup {
+  float: left;
+}
+.items-dropmenu {
+  display: none;
+}
+
+.list-item {
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+.dropdown-menu {
+  width: 300px;
+}
+
+.item-count-btn {
+  display: flex;
+  float: right;
+  margin-right: 10px;
+}
+
+.ctext {
+  color: black;
+}
+
+.fasfa {
+  transition: transform 0.5s;
+}
+
+@media screen and (max-width:370px) {
+  .menu-status{
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+}
