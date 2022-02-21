@@ -1,5 +1,6 @@
 import "./Menu.css";
 import React, { useState, useEffect } from 'react';
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import FoodItem from "../FoodItem/FoodItem";
 import MenuStatus from "./MenuStatus";
 import axios from "axios";
@@ -7,12 +8,14 @@ import axios from "axios";
 function Menu(props) {
 
     const [items, setItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         axios.get('https://thumbstack-backend.herokuapp.com/items')
             .then(function (response) {
                 //console.log(response);
                 setItems(response.data);
+                setIsLoading(false);
             })
             .catch(function (error) {
                 console.log(error);
@@ -22,6 +25,7 @@ function Menu(props) {
 
     return (
         <div className="menu">
+            {isLoading ? <LoadingSpinner /> :
             <div className="container">
                 <div className="row">
                     {
@@ -42,7 +46,7 @@ function Menu(props) {
                         })
                     }
                 </div>
-            </div>
+            </div> }
             {(props.totalPrice === 0) ? null : <MenuStatus totalPrice={props.totalPrice} totalCount={props.totalCount} addItem={props.addItem} removeItem={props.removeItem} />}
             
         </div>

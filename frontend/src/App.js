@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Home from './components/Home/Home';
 import Menu from './components/Menu/Menu';
 import Cart from './components/Cart/Cart';
-import Navbar from './Navbar/Navbar';
+import Navbar from './components/Navbar/Navbar';
 
 import {
   BrowserRouter,
